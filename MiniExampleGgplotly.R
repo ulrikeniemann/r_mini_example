@@ -45,7 +45,7 @@ ggplotly(reg)
 # Balken BIP nach Kontinent ----------------------------------------------------
 tab <- data %>% 
   group_by(Kontinent) %>% 
-  summarize(BIPproKopf = mean(BIPproKopf)) 
+  summarise(BIPproKopf = mean(BIPproKopf)) 
 
 bar <- ggplot(tab, aes(Kontinent, BIPproKopf, fill = Kontinent)) +
   geom_bar(stat = "identity") +
